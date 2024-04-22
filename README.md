@@ -6,7 +6,7 @@
 For more information, [visit the original home page for HoRNDIS](http://www.joshuawise.com/horndis).
 
 ## About this Repo:
-This is an attempt to rewrite the driver with latest development framework.
+This is an attempt to rewrite the driver with the latest development framework.
 + 【2024.04.22】Initial fork and updated build settings in Xcode project file 
 + 【2022.08.13】Add support fo M1 Mac; multiple fixes.
 + 【2022.06.12】Fix download speed monitor for macOS 11+.
