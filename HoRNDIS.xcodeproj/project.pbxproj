@@ -13,7 +13,7 @@
 
 /* Begin PBXFileReference section */
 		42BCD8A61645AFC500683BF7 /* HoRNDIS.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoRNDIS.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		42BCD8AA1645AFC500683BF7 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+		42BCD8AA1645AFC500683BF7 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
 		42BCD8B11645AFC500683BF7 /* HoRNDIS.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = HoRNDIS.h; sourceTree = SOURCE_ROOT; tabWidth = 4; };
 		42BCD8B21645AFC500683BF7 /* HoRNDIS.cpp */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HoRNDIS.cpp; sourceTree = SOURCE_ROOT; tabWidth = 4; };
 		4933A6EB28A6158F0075A835 /* Supporting Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Supporting Files"; sourceTree = "<group>"; };
@@ -204,6 +204,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				LLVM_LTO = YES;
@@ -266,6 +267,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				LLVM_LTO = YES;
@@ -281,22 +283,23 @@
 		42BCD8B81645AFC500683BF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_DIVIDE_BY_ZERO = NO;
 				CLANG_ANALYZER_NULL_DEREFERENCE = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_iakhiaev = "Mac Developer: mikhailai@gmail.com (74ZR97MLB5)";
-				CODE_SIGN_joshua = "Developer ID Application: Joshua Wise (54GTJ2AU36)";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 9.4;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting Files/HoRNDIS-Prefix.pch";
 				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Headers/**";
 				INFOPLIST_FILE = "Supporting Files/HoRNDIS-Info.plist";
-				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/;
-				KERNEL_FRAMEWORK_HEADERS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/;
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64_arm64e";
+				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks\n/Applications/Xcode.app/Contents/Developer/Platforms/DriverKit.platform/Developer/SDKs/DriverKit23.4.sdk/System/DriverKit/System/Library/Frameworks";
+				KERNEL_FRAMEWORK_HEADERS = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks\n/Applications/Xcode.app/Contents/Developer/Platforms/DriverKit.platform/Developer/SDKs/DriverKit23.4.sdk/System/DriverKit/System/Library/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 9.4;
 				MODULE_NAME = "$(PRODUCT_BUNDLE_IDENTIFIER)";
@@ -307,6 +310,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = driverkit;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Debug;
@@ -314,19 +318,20 @@
 		42BCD8B91645AFC500683BF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_iakhiaev = "Mac Developer: mikhailai@gmail.com (74ZR97MLB5)";
-				CODE_SIGN_joshua = "Developer ID Application: Joshua Wise (54GTJ2AU36)";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 9.4;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting Files/HoRNDIS-Prefix.pch";
 				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Headers/**";
 				INFOPLIST_FILE = "Supporting Files/HoRNDIS-Info.plist";
-				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/;
-				KERNEL_FRAMEWORK_HEADERS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/;
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64_arm64e";
+				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks\n/Applications/Xcode.app/Contents/Developer/Platforms/DriverKit.platform/Developer/SDKs/DriverKit23.4.sdk/System/DriverKit/System/Library/Frameworks";
+				KERNEL_FRAMEWORK_HEADERS = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks\n/Applications/Xcode.app/Contents/Developer/Platforms/DriverKit.platform/Developer/SDKs/DriverKit23.4.sdk/System/DriverKit/System/Library/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 9.4;
 				MODULE_NAME = "$(PRODUCT_BUNDLE_IDENTIFIER)";

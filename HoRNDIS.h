@@ -50,6 +50,10 @@
 #include <IOKit/usb/IOUSBHostFamily.h>
 #include <IOKit/usb/IOUSBHostPipe.h>
 
+//Zack
+
+//Zack
+
 extern "C"
 {
 	#include <sys/param.h>
